@@ -12,9 +12,7 @@ import User from './components/User';
 import UserList from './components/UsersList';
 
 // Data
-import usersDB from './data/usersDB.json';
-
-console.log(usersDB);
+import db from './data/usersDB.json';
 
 let jane = {
   name:'Jane Doe',
@@ -26,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-    <UserList userArray = {usersDB} />
+    <UserList listado = {db} title='Listado de personajes' />
 
       <Title fecha= "20 de julio" pais="Filipinas" />
 
