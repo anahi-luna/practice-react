@@ -1,6 +1,6 @@
 // Assets
 import './assets/css/App.css';
-import laImagenDelLogo from './assets/images/logo.svg';
+/* import laImagenDelLogo from './assets/images/logo.svg';
 import sushi from './assets/images/rollos-de-sushi.JPG';
 import licuadora from './assets/images/adfF.JPG';
 import auron from './assets/images/pcdeverdad.JPG';
@@ -9,27 +9,51 @@ import auron from './assets/images/pcdeverdad.JPG';
 import Title from './components/Title';
 import Header from './components/Header';
 import User from './components/User';
-import UserList from './components/UsersList';
+import UserList from './components/UsersList'; */
 
 //Class Component
 import Counter from './components/Counter';
+import RickMorty from './components/RickMorty';
+
 
 // Data
-import db from './data/usersDB.json';
+/* import db from './data/usersDB.json';
 
 let jane = {
   name:'Jane Doe',
   email: "jdoe@gmail.com",
   bio: 'dnfosdnfifoweiwfeoiwneifweifjweoifwjoefjwoef'
-}
+} */
+let n=15;
 
 function App() {
+  
+  const sumar15Handler =()=>{
+    n+=15;
+    console.log(n);
+    
+  }
+
   return (
     <div className="App">
-      <Header />
-
+      {/* <Header /> */}
+      <RickMorty/>
       <Counter />
-    <UserList listado = {db} title='Listado de personajes' />
+      <hr/>
+      <ul>
+        <li><b>onClick</b></li>
+        <li><b>onSubmit</b></li>
+        <li><b>onMouseHover</b></li>
+        <li><b>onFocus</b></li>
+        <li><b>onChange</b></li>
+        <li><b>onInput</b></li>
+        <li><b>onMouseOut</b></li>
+        <li><b>onWindowScroll</b></li>
+      </ul>
+      <hr/>
+      <h3>{n}</h3>
+      <button onClick={sumar15Handler}>Sumar 15</button>
+    {/* <UserList listado = {db} title='Listado de personajes' />
 
       <Title fecha= "20 de julio" pais="Filipinas" />
 
@@ -40,9 +64,9 @@ function App() {
         <br/>
         <em>otras más</em>
       </Title>
-      <User {...jane} />  
+      <User {...jane} /> */}  
 
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={laImagenDelLogo} className="App-logo" alt="logo" />
         <img src=  '/images/rollos-de-sushi.jpg' />
         <img src=  {licuadora} />
@@ -59,7 +83,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
